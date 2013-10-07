@@ -1,3 +1,5 @@
+c:\users\andko_000\мои документы\github\django\mysite
+
 Django installation:
 
 download ez_setup and get-pip from http://www.pip-installer.org/en/latest/installing.html
