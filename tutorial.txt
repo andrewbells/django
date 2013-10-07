@@ -1,0 +1,14 @@
+Django installation:
+
+download ez_setup and get-pip from http://www.pip-installer.org/en/latest/installing.html
+
+cmd:
+python ez_setup.py
+python get-pip.py
+pip install --upgrade setuptools
+pip install Django==1.5.4
+
+
+
+>>> import django
+>>> print (django.get_version())
