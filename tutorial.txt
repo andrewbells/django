@@ -25,3 +25,6 @@ cd into outer mysite
 python manage.py runserver
 
 http://127.0.0.1:8000/
+
+	in order to open python shell in cmd within ur project:
+	python manage.py shell
