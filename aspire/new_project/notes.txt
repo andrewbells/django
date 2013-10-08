@@ -1,0 +1,4 @@
+auth superuser:
+andrewk
+andkolok@gmail.com
+password: 111
