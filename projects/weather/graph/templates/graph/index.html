@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load i18n ilma %}
+{% block content %}
+    {% get_current_weather in "moscow" %}
+	{% get_current_weather in "helsinki" %}
+	{% get_current_weather in "berlin" %}
+{% endblock %}
+
+<!--C:\Users\andko_000\Documents\weather_app\weather\graph\templates\graph\index.html-->

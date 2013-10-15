@@ -33,6 +33,7 @@ http://localhost:8000/
 	testing (tests should be written beforehand, polls is the app name) :
 	python manage.py test polls
 
-		virtualenv new_project
-		>new_project\Scripts\activate
+	Working from virtualenv. (Dont forget to install django "pip install django"	starting work from under venv -- very beginning)	
+		virtualenv venv
+		>venv\Scripts\activate
 		...\deactivate

@@ -1,0 +1,17 @@
+
+
+{% load i18n %}
+
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>{% block title %}simple document{% endblock %}</title>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <div id="header">{% block header %}{% endblock %}</div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">{% block footer %}{% endblock %}</div>
+</body>
+</html>
+<!--C:\Users\andko_000\Documents\weather_app\weather\graph\templates\base.html-->

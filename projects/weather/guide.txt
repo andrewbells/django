@@ -1,0 +1,52 @@
+virtualenv
+south
+
+
+python manage.py check_weather --verbosity=2
+
+
+go on from here:
+
+
+Note that south was installed in the virtual environment not spoiling the global python namespace. Now we will syncronize the database to create south_history table, create the initial migration for climate_change and apply it.
+
+
+# create the missing database table from south app
+python manage.py syncdb
+# create initial migration for climate_change app which will be used by new projects
+python manage.py schemamigration app_name --initial
+# fake this migration for this project
+python manage.py migrate app_name --fake
+
+models.py
+#...
+class Location(models.Model):
+    sysname = models.SlugField(
+        _("system name"),
+        max_length=200,
+        unique=True,
+        blank=True,
+        default="",
+        help_text=_("Do not change this value"),
+        )
+    name = models.CharField(_("name"), max_length=200)
+    location_id = models.CharField(
+        _("location ID"),
+        max_length=20,
+        help_text=_("Location IDs can be retrieved from URLs of weather "
+            "at specific cities at Yahoo! Weather, e.g. GMXX0008 from "
+            "http://weather.yahoo.com/forecast/GMXX0008.html"),
+        )
+#...
+
+
+
+# create a new migration called "add_sysname"
+python manage.py schemamigration my_app add_sysname --auto
+# apply it to the database
+python manage.py migrate my_app
+
+
+
+did not finish part 5
+http://djangotricks.blogspot.ru/2009/10/weather-app-tutorial-part-5-of-5-graph.html
